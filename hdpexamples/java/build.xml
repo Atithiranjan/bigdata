@@ -18,7 +18,7 @@
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/hdpexamples.jar" basedir="build/classes">
             <manifest>
-                <attribute name="Main-Class" value="com.cloudxlab.titanic.Female_survived"/>
+                <attribute name="Main-Class" value="com.cloudxlab.aadhar.p1driver"/>
             </manifest>
         </jar>
     </target>
