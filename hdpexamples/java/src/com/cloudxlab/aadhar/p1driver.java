@@ -21,7 +21,7 @@ public class p1driver {
   
   job.setJarByClass(p1driver.class);
   job.setMapperClass(p1mapper.class);
-  //setReducerClass(p1reducer.class);
+  job.setReducerClass(p1reducer.class);
   
   
   job.setOutputKeyClass(Text.class);
