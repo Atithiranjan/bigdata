@@ -30,12 +30,12 @@ public void map(Object key, Text value, Context context) throws IOException, Int
          }
          else if(i==2)
          {
-         String ca = "A3" + words[0];
+         String ca = "A3" + words[1];
           context.write(new Text(ca),new LongWritable(apr));
          }
          else 
          {
-         String cr = "A4" + words[0];
+         String cr = "A4" + words[1];
           context.write(new Text(cr),new LongWritable(rej));
          }
       }   
