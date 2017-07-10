@@ -16,9 +16,9 @@ throws IOException, InterruptedException
  long sum =0;
 for(LongWritable iw:values) 
 {
- sum = sum + iw
+ sum = sum + iw;
 }
-context.write(new Text(flag),new LongWritable(sum))
+context.write(new Text(flag),new LongWritable(sum));
 }
 }
 
