@@ -27,7 +27,7 @@ public class p1driver {
   setOutputKeyClass(Text.class);
   setOutputValueClass(LongWritable.class);
   
-  FileInputFormat.addInputPath(job, new Path(args[0]);
+  FileInputFormat.addInputPath(job, new Path(args[0]));
   FileOutputFormat.setOutputPath(job,new Path(args[1]));
   
   boolean result = job.waitForCompletion(true);
