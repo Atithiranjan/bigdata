@@ -10,17 +10,34 @@ public class p1mapper extends Mapper<Object,Text,Text,LongWritable>
 {
 public void map(Object key, Text value, Context context) throws IOException, InterruptedException
  {
-      String[] words = value.toString().split("\t");
-      
-      statecity = words[0] + words[1]
-      
-      int apr = Integer.parseInt(words[2]);
-      int rej = Integer.parseInt(words[3]);
-       
-      
-      
-      
+     int apr;
+     int rej;
  
-
- }
+      String[] words = value.toString().split("\t");
+      for(i=0;i<4;i++)
+      {
+        apr = Integer.parseInt(words[2]);
+        rej = Integer.parseInt(words[3]);
+        if(i==0)
+         {
+         String sa = "A1" + words[0];
+         context.write(sa,new LongWritable(apr));
+         }
+         else if(i==1)
+         {
+         String sr = "A2" + words[0];
+          context.write(sr,new LongWritable(rej));
+         }
+         else if(i==2)
+         {
+         String ca = "A3" + words[0];
+          context.write(ca,new LongWritable(apr));
+         }
+         else 
+         {
+         String cr = "A4" + words[0];
+          context.write(cr,new LongWritable(rej));
+         }
+      }   
+  }
 }
