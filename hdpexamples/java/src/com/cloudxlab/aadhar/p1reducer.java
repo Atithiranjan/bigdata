@@ -9,14 +9,15 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 public class p1reducer extends Reducer<Text,LongWritable,Text,LongWritable>
 {
-void reduce(Text key,Iterable<LongWritable> values,Context context) 
+public void reduce(Text key,Iterable<LongWritable> values,Context context) 
 throws IOException, InterruptedException
 {
- String flag = key.substring(2,key.length());
+ String fkey = key.toString();
+ String flag = fkey.substring(2,fkey.length());
  long sum =0;
 for(LongWritable iw:values) 
 {
- sum = sum + iw;
+ sum += iw.get();
 }
 context.write(new Text(flag),new LongWritable(sum));
 }
