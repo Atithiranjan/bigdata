@@ -19,13 +19,13 @@ public class p1driver {
   JobConf conf = new JobConf();
   Job job = new Job(conf,"Aadhar Counting");
   
-  setJarByClass(p1driver.class);
-  setMapperClass(p1mapper.class);
+  job.setJarByClass(p1driver.class);
+  job.setMapperClass(p1mapper.class);
   //setReducerClass(p1reducer.class);
   
   
-  setOutputKeyClass(Text.class);
-  setOutputValueClass(LongWritable.class);
+  job.setOutputKeyClass(Text.class);
+  job.setOutputValueClass(LongWritable.class);
   
   FileInputFormat.addInputPath(job, new Path(args[0]));
   FileOutputFormat.setOutputPath(job,new Path(args[1]));
