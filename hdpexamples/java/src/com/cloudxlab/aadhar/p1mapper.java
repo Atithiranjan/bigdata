@@ -14,7 +14,7 @@ public void map(Object key, Text value, Context context) throws IOException, Int
      int rej;
  
       String[] words = value.toString().split("\t");
-      for(i=0;i<4;i++)
+      for(int i=0;i<4;i++)
       {
         apr = Integer.parseInt(words[2]);
         rej = Integer.parseInt(words[3]);
