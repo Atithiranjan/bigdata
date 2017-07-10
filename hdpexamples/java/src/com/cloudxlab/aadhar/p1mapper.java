@@ -21,22 +21,22 @@ public void map(Object key, Text value, Context context) throws IOException, Int
         if(i==0)
          {
          String sa = "A1" + words[0];
-         context.write(sa,new LongWritable(apr));
+         context.write(new Text(sa),new LongWritable(apr));
          }
          else if(i==1)
          {
          String sr = "A2" + words[0];
-          context.write(sr,new LongWritable(rej));
+          context.write(new Text(sr),new LongWritable(rej));
          }
          else if(i==2)
          {
          String ca = "A3" + words[0];
-          context.write(ca,new LongWritable(apr));
+          context.write(new Text(ca),new LongWritable(apr));
          }
          else 
          {
          String cr = "A4" + words[0];
-          context.write(cr,new LongWritable(rej));
+          context.write(new Text(cr),new LongWritable(rej));
          }
       }   
   }
