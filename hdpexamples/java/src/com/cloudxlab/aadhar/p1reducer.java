@@ -1,4 +1,4 @@
-package com.aadhar.p1reducer;
+package com.cloudxlab.aadhar;
 import java.io.IOException;
 
 import org.apache.hadoop.io.DoubleWritable;
