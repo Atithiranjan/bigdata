@@ -18,7 +18,7 @@
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/hdpexamples.jar" basedir="build/classes">
             <manifest>
-                <attribute name="Main-Class" value="com.cloudxlab.aadhar.p1driver"/>
+                <attribute name="Main-Class" value="com.cloudxlab.Training1.rajwordcount"/>
             </manifest>
         </jar>
     </target>
