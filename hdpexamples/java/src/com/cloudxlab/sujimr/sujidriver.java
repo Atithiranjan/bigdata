@@ -1,4 +1,4 @@
-package com.cloudxlab.Training1;
+package com.cloudxlab.sujimr;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.ArrayWritable;
@@ -23,8 +23,8 @@ public static void main(String[] args) throws Exception
   Job job = new Job(conf,"SujiWordCount");
   
   job.setJarByClass(sujidriver.class);
-  job.setMapperClass(rajwordmapper.class);
-  job.setReducerClass(rajwordreducer.class);
+  job.setMapperClass(sujimapper.class);
+  job.setReducerClass(sujireducer.class);
 
   job.setOutputKeyClass(Text.class);
   job.setOutputValueClass(LongWritable.class);
