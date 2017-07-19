@@ -12,7 +12,7 @@ public class sujireducer extends Reducer<Text, LongWritable, Text, LongWritable>
 public void reduce(Text key, Iterable <LongWritable> values, Context context)
 throws IOException, InterruptedException
 {
-Long sum = 0;
+long sum = 0;
 for(LongWritable iw:values)
 {
  sum = sum + iw.get();
