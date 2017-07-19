@@ -17,7 +17,7 @@ public void map(Object key, Text value, Context context)
   {
   
    word = word.replaceAll("[^a-zA-Z0-9]","");
-   word = word.toLowercase();
+   word = word.toLowerCase();
    
    Text outkey = new Text(word);
    LongWritable one = new LongWritable(1);
