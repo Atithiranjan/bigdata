@@ -9,6 +9,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 public class sujimapper extends Mapper<Object, Text, Text, LongWritable>
 {
 public void map(Object key, Text value, Context context)
+throws IOException, InterruptedException
 {
 
   String[] words = value.toString().split("[ /t]+");
