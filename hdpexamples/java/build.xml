@@ -18,7 +18,7 @@
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/hdpexamples.jar" basedir="build/classes">
             <manifest>
-                <attribute name="Main-Class" value="com.cloudxlab.sujimr.sujidriver"/>
+                <attribute name="Main-Class" value="com.cloudxlab.sujiexe1.ex1driver"/>
             </manifest>
         </jar>
     </target>
