@@ -22,8 +22,8 @@ public class ex1driver {
   Job job = new Job(conf,"Aadhar Counting");
   
   job.setJarByClass(ex1driver.class);
-  job.setMapperClass(p1mapper.class);
-  job.setReducerClass(p1reducer.class);
+  job.setMapperClass(ex1mapper.class);
+  job.setReducerClass(ex1reducer.class);
   
   
   job.setOutputKeyClass(Text.class);
