@@ -1,4 +1,4 @@
-package com.cloudxlab.aadhar;
+package com.cloudxlab.sujiexe1;
 import java.io.IOException;
 
 import org.apache.hadoop.io.DoubleWritable;
