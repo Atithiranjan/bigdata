@@ -23,7 +23,8 @@ public class pdfrecordreader extends RecordReader {
 
 	@Override
 	public void initialize(InputSplit genericSplit, TaskAttemptContext context)
-			throws IOException, InterruptedException {
+			throws IOException, InterruptedException 
+	{
 
 		FileSplit split = (FileSplit) genericSplit;
 		Configuration job = context.getConfiguration();
@@ -42,10 +43,12 @@ public class pdfrecordreader extends RecordReader {
 		pdf = PDDocument.load(fileIn);
 		stripper = new PDFTextStripper();
 		parsedText = stripper.getText(pdf);
-		this.lines = parsedText.split("\n	}
+		this.lines = parsedText.split("\n");
+	}
 
 	@Override
-	public boolean nextKeyValue() throws IOException, InterruptedException {
+	public boolean nextKeyValue() throws IOException, InterruptedException 
+	{
 
 		if (key == null) {
 			key = new LongWritable();
@@ -74,25 +77,30 @@ public class pdfrecordreader extends RecordReader {
 
 	@Override
 	public LongWritable getCurrentKey() throws IOException,
-			InterruptedException {
+			InterruptedException 
+	{
 
 		return key;
 	}
 
 	@Override
-	public Text getCurrentValue() throws IOException, InterruptedException {
+	public Text getCurrentValue() throws IOException, InterruptedException 
+		
+	{
 
 		return value;
 	}
 
 	@Override
-	public float getProgress() throws IOException, InterruptedException {
+	public float getProgress() throws IOException, InterruptedException 
+	{
 
 		return 0;
 	}
 
 	@Override
-	public void close() throws IOException {
+	public void close() throws IOException 
+	{
 
 	}
 
