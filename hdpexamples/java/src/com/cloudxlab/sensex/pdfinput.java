@@ -19,7 +19,7 @@ public RecordReader<Key_value,IntWritable> createRecordReader(InputSplit arg0,
  
 TaskAttemptContext arg1) throws IOException, InterruptedException {
  
-return new pdfRecordReader();
+return new pdfrecordreader();
  
 }
  
