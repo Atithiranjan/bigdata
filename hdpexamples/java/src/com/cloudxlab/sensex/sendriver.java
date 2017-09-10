@@ -64,6 +64,8 @@ public class sendriver {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(LongWritable.class);
     //****yet to change*****//
+		job.setInputFormatClass(pdfinput.class);
+                job.setOutputFormatClass(TextOutputFormat.class);
 
 		FileInputFormat.addInputPath(job, new Path("/home/rajbharathcse8284/a1.pdf"));
 		FileOutputFormat.setOutputPath(job, new Path("senout1"));
