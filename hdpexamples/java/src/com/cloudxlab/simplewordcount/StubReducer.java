@@ -1,4 +1,4 @@
-package com.cloudxlab.simplewordcount;
+package com.cloudxlab.sensex;
 import java.io.IOException;
 
 import org.apache.hadoop.io.DoubleWritable;
@@ -7,7 +7,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class StubReducer extends Reducer<Text, LongWritable, Text, LongWritable> {
+public class senreducer extends Reducer<Text, LongWritable, Text, LongWritable> {
 
   @Override
   public void reduce(Text key, Iterable<LongWritable> values, Context context)
