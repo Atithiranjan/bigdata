@@ -1,5 +1,5 @@
 
-package com.cloudxlab.simplewordcount;
+package com.cloudxlab.sensex;
 import java.io.IOException;
 
 import org.apache.hadoop.fs.FileSystem;
