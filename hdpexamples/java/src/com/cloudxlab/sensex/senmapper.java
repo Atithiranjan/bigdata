@@ -8,7 +8,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class StubMapper extends Mapper<Object, Text, Text, LongWritable> {
+public class senmapper extends Mapper<Object, Text, Text, LongWritable> {
 
   @Override
   public void map(Object key, Text value, Context context)
